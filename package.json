@@ -1,0 +1,44 @@
+{
+  "name": "eventup",
+  "version": "1.0.0",
+  "description": "eventup is an open source initiative website where we can choose to attend an event (either physically or virtually) based on our interest and get our attendance marked digitally by scanning a QR code.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-concurrently": "npm install -g concurrently",
+    "install-dep": "npm run install-backend && npm run install-frontend",
+    "install-all": "npm run install-dep && npm run install-concurrently",
+    "backend": "nodemon app.js --prefix backend",
+    "frontend": "npm start --prefix frontend",
+    "lint": "eslint ./",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alok4k45h/eventup.git"
+  },
+  "author": "Alok Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alok4k45h/eventup/issues"
+  },
+  "homepage": "https://github.com/Alok4k45h/eventup#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}
